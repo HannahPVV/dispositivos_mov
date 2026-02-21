@@ -59,4 +59,7 @@ dependencies {
     //aqui pegar lo de lottie hacer syns *seguir xml y kotlin y iu tradiconal
     //copair el xml en saplas y lo pegamos y tienes su id, el src tien que ir dentro de ssets si es json ,
     //o la oa froma porfgrma es ir al acticity poner funcion y se conceta con binding
+
+    implementation("com.airbnb.android:lottie:6.4.1")
+
 }
