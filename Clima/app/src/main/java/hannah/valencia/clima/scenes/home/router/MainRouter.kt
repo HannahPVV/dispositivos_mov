@@ -23,7 +23,7 @@ class MainRouter(val context: Context, val activity: BaseActivity) {
 
         //finaliza la actividad actual
         this.activity.finish()
-        // popis
+        // sin eso
     }
 
 }
