@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/background"
+    tools:context=".scenes.register.view.RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="24dp"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="15dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registro"
+                    android:textSize="32sp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="@color/blue_dark"
+                    android:layout_marginBottom="20dp"/>
+
+                <EditText
+                    android:id="@+id/et_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/custom_edittext"
+                    android:hint="Usuario"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:drawableStart="@drawable/ic_user"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/blue_medium"
+                    android:maxLength="20"/>
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_marginTop="16dp"
+                    android:hint="Nombre(s)"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:drawableStart="@drawable/ic_name"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/blue_medium"
+                    android:maxLength="30"/>
+
+                <EditText
+                    android:id="@+id/et_last"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/custom_edittext"
+                    android:layout_marginTop="16dp"
+                    android:hint="Apellido(s)"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:drawableStart="@drawable/ic_name"
+                    android:drawablePadding="10dp"
+                    android:drawableTint="@color/blue_medium"
+                    android:maxLength="30"/>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_pass"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/blue_medium"
+                    app:hintEnabled="false"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_pass"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="Contraseña"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="48dp"
+                        android:drawableStart="@drawable/ic_pass"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/blue_medium"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_confirm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    app:passwordToggleEnabled="true"
+                    app:passwordToggleTint="@color/blue_medium"
+                    app:hintEnabled="false"
+                    app:errorEnabled="true">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/et_confirm"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:background="@drawable/custom_edittext"
+                        android:hint="Confirmar contraseña"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="48dp"
+                        android:drawableStart="@drawable/ic_pass"
+                        android:drawablePadding="10dp"
+                        android:drawableTint="@color/blue_medium"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_register"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:text="Registrarme"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:backgroundTint="@color/blue_medium"
+                    app:cornerRadius="25dp"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>

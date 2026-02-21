@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue_light">#E3F2FD</color>     <color name="blue_medium">#2196F3</color>    <color name="blue_dark">#1565C0</color>      <color name="blue_navy">#0D47A1</color>      <color name="blue_cyan">#00BCD4</color>      <color name="green_light">#E8F5E9</color>    <color name="green_medium">#4CAF50</color>   <color name="green_dark">#2E7D32</color>     <color name="green_emerald">#2ECC71</color>  <color name="green_teal">#009688</color>
+    <color name="gray_disabled">#BDBDBD</color>
+    <!-- +1 tono -->
+    <color name="blue_light_1">#BBDEFB</color>
+
+    <!-- +2 tonos -->
+    <color name="blue_light_2">#90CAF9</color>
+
+    <!-- +3 tonos (ya se nota bastante pero sigue suave) -->
+    <color name="blue_light_3">#64B5F6</color>
+
+    <!-- alternativa ligeramente grisácea (muy bonita para backgrounds) -->
+    <color name="blue_light_soft">#D6ECFF</color>
+</resources>
