@@ -35,6 +35,7 @@ class RegisterActivity : BaseActivity() {
         this.sharedPreferenceManager = SharedPreferenceManager(this)
 
 
+
         ViewCompat.setOnApplyWindowInsetsListener(binding.main) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -75,6 +76,11 @@ class RegisterActivity : BaseActivity() {
         binding.etPass.addTextChangedListener { watcher() }
         binding.etConfirm.addTextChangedListener { watcher() }
 
+        //btn back
+        binding.btnBack.setOnClickListener {
+            this.finish() // cierra la actividad actual y te regresa al Login
+        }
+
         // Acción al presionar el botón de registro
         binding.btnRegister.setOnClickListener {
             val user = binding.etUser.text.toString()
@@ -96,6 +102,9 @@ class RegisterActivity : BaseActivity() {
                     this.finish() // Regresa a la pantalla anterior
                 }
                 .show()
+
+
+
         }
     }
 }
