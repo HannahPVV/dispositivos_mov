@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item_forecast_container"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvHourItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ahora"
+        android:textColor="#757575"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/ivWeatherIcon"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginVertical="8dp"
+        android:src="@drawable/ic_explore" /> <TextView
+    android:id="@+id/tvTempItem"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="25°"
+    android:textColor="#000000"
+    android:textStyle="bold" />
+
+</LinearLayout>

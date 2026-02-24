@@ -7,7 +7,6 @@ import hannah.valencia.clima.R
 import hannah.valencia.clima.databinding.ActivityHomeBinding
 import hannah.valencia.clima.scenes.base.BaseActivity
 import hannah.valencia.clima.scenes.home.viewModel.HomeViewModel
-import hannah.valencia.clima.scenes.list.view.ListFragment
 import hannah.valencia.clima.scenes.profile.view.ProfileFragment
 
 
@@ -25,7 +24,7 @@ class HomeActivity : BaseActivity(){
     private fun configureActivity(){
         this.initActivityView()
         this.configureListener()
-        this.replaceFragment(ListFragment())
+        this.replaceFragment(HomeFragment())
     }
 
     private fun initActivityView(){
@@ -37,7 +36,7 @@ class HomeActivity : BaseActivity(){
     private fun configureListener(){
         this.binding.bnvHome.setOnItemSelectedListener { item->
             when (item.itemId){
-                R.id.home_menu-> this.replaceFragment(ListFragment())
+                R.id.home_menu-> this.replaceFragment(HomeFragment())
                 R.id.explore_menu-> this.replaceFragment(ProfileFragment())
             }
             true

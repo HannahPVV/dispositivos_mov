@@ -100,6 +100,8 @@ class MainActivity : BaseActivity() {
             this.binding.etPassword.error = if (esValido) null else "La contraseña es requerida"
         }
 
+
+
     }
 
     // La vista escucha acciones del usuario (clicks y escritura) y envía esos cambios al ViewModel.

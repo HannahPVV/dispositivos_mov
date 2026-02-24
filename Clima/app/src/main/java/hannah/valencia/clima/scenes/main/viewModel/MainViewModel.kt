@@ -102,8 +102,7 @@ class MainViewModel (val context: Context, val activity: MainActivity): ViewMode
 
             //  VALIDACIONES DE USUARIO Y CONTRASEÑA
             if (this.user.userName == userGuardado && this.user.password == passGuardada) {
-                // Si coinciden, navegamos al Home usando el nombre real guardado
-                this.router.routeToHomeView(name = nombreGuardado ?: "Usuario")
+                this.router.routeToHomeView()
             } else {
                 this.model.isValidUser.value = "Credenciales incorrectas"
             }
