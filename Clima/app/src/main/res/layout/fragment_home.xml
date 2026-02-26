@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sv_home_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue_light"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:id="@+id/ll_main_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingHorizontal="16dp"
+        android:paddingTop="60dp"
+        android:paddingBottom="32dp"> <androidx.cardview.widget.CardView
+        android:id="@+id/cv_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="28dp"
+        app:cardElevation="0dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingVertical="40dp"> <TextView
+            android:id="@+id/tv_city_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zibatá"
+            android:textColor="@color/blue_dark"
+            android:drawableStart="@drawable/ic_explore"
+            android:drawablePadding="10dp"
+            android:drawableTint="@color/blue_dark"
+            android:textSize="26sp"
+            android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tv_main_temp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="25°"
+                android:textColor="#000000"
+                android:textSize="90sp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_hourly_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="0dp">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_hourly_forecast"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_forecast" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cv_details_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardElevation="0dp">
+
+            <TableLayout
+                android:id="@+id/tl_weather_details"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="20dp"
+                android:stretchColumns="1">
+
+                <TableRow android:paddingVertical="14dp">
+                    <TextView android:text="Sensación" android:textColor="#757575" android:textSize="16sp" />
+                    <TextView android:id="@+id/tv_feels_like_val" android:gravity="end" android:text="26°" android:textSize="16sp" android:textStyle="bold" />
+                </TableRow>
+                <View android:layout_height="1dp" android:background="#EEEEEE" />
+
+                <TableRow android:paddingVertical="14dp">
+                    <TextView android:text="Índice UV" android:textColor="#757575" android:textSize="16sp" />
+                    <TextView android:id="@+id/tv_uv_val" android:gravity="end" android:text="8" android:textSize="16sp" android:textStyle="bold" />
+                </TableRow>
+                <View android:layout_height="1dp" android:background="#EEEEEE" />
+
+                <TableRow android:paddingVertical="14dp">
+                    <TextView android:text="Viento" android:textColor="#757575" android:textSize="16sp" />
+                    <TextView android:id="@+id/tv_wind_val" android:gravity="end" android:text="13 km/h" android:textSize="16sp" android:textStyle="bold" />
+                </TableRow>
+                <View android:layout_height="1dp" android:background="#EEEEEE" />
+
+                <TableRow android:paddingVertical="14dp">
+                    <TextView android:text="Precipitación" android:textColor="#757575" android:textSize="16sp" />
+                    <TextView android:id="@+id/tv_precipitation_val" android:gravity="end" android:text="0 mm" android:textSize="16sp" android:textStyle="bold" />
+                </TableRow>
+                <View android:layout_height="1dp" android:background="#EEEEEE" />
+
+                <TableRow android:paddingVertical="14dp">
+                    <TextView android:text="Humedad" android:textColor="#757575" android:textSize="16sp" />
+                    <TextView android:id="@+id/tv_humidity_val" android:gravity="end" android:text="12 %" android:textSize="16sp" android:textStyle="bold" />
+                </TableRow>
+
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</ScrollView>
