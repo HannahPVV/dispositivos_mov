@@ -2,6 +2,6 @@
 <paths xmlns:android="http://schemas.android.com/apk/res/android">
     <external-path
         name="my_pictures"
-        path="Android/data/hannah.valencia.hello_world/files/Pictures"
+        path="Android/data/hannah.valencia.clima/files/Pictures"
         />
 </paths>

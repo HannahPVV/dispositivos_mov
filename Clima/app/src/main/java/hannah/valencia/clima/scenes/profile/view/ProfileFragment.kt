@@ -50,7 +50,7 @@ class ProfileFragment : Fragment() {
 
             this.pictureUri= FileProvider.getUriForFile(
                 this.requireContext(),
-                "hannah.valencia.hello_world.fileprovider",
+                "hannah.valencia.clima.fileprovider",
                 photoFile
 
             )
