@@ -62,4 +62,8 @@ dependencies {
 
     implementation("com.airbnb.android:lottie:6.4.1")
 
+    implementation("androidx.media3:media3-common:1.5.1")
+
+    implementation("androidx.biometric:biometric:1.2.0-alpha05")
+
 }

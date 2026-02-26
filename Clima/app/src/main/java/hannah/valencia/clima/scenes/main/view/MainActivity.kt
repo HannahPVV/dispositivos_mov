@@ -121,6 +121,9 @@ class MainActivity : BaseActivity() {
             this.viewModel.user.password= it.toString()
             this.viewModel.validateForm()
         }
+        this.binding.btnBiometric.setOnClickListener {
+            this.viewModel.useBiometrics()
+        }
 
     }
 

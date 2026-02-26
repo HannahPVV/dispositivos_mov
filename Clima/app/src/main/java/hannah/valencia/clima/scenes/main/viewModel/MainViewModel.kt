@@ -2,8 +2,12 @@ package hannah.valencia.clima.scenes.main.viewModel
 
 import android.content.Context
 import android.util.Log
+import android.widget.Toast
+import androidx.biometric.BiometricPrompt
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
+import hannah.valencia.clima.biometrics.BiometricAuthListener
+import hannah.valencia.clima.biometrics.BiometricUtil
 import hannah.valencia.clima.dataClases.User
 import hannah.valencia.clima.scenes.home.router.MainRouter
 import hannah.valencia.clima.scenes.main.model.MainModel
@@ -13,7 +17,7 @@ import hannah.valencia.clima.sharedPreference.SharedPreferenceManager
 
 // Llevará la lógica de negocio, en este caso validará el formulario.
 //Intermediario entre vista y modelo
-class MainViewModel (val context: Context, val activity: MainActivity): ViewModel(){
+class MainViewModel (val context: Context, val activity: MainActivity): ViewModel(), BiometricAuthListener{
 
    //VARIABLES PRIVADAS
     private val TAG = MainViewModel::class.java.simpleName
@@ -109,6 +113,27 @@ class MainViewModel (val context: Context, val activity: MainActivity): ViewMode
         } else {
             this.model.isValidUser.value = "El usuario no existe"
         }
+    }
+
+    fun useBiometrics(){
+        BiometricUtil.showBiometricPrompt(
+            activity = activity,
+            listener = this,
+            cryptoObject = null,
+            allowDeviceCredential = true
+        )
+    }
+
+    override fun onBiometricAuthenticationSuccess(result: BiometricPrompt.AuthenticationResult) {
+        if (this.sharedPreferenceManager.getBoolean(SharedPreferenceConstants.IS_REGISTERED_KEY)){
+            this.router.routeToHomeView()
+        }
+        else
+            this.model.isValidUser.value = "El ususario no existe"
+    }
+
+    override fun onBiometricAuthenticationError(errorCode: Int, errorMessage: String) {
+        Toast.makeText(this.context, errorMessage, Toast.LENGTH_SHORT).show()
     }
 
 
