@@ -31,6 +31,7 @@ class MainActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         this.configureActivity()
+
     }
 
     /**
@@ -120,6 +121,10 @@ class MainActivity : BaseActivity() {
         this.binding.etPassword.addTextChangedListener {
             this.viewModel.user.password= it.toString()
             this.viewModel.validateForm()
+        }
+
+        this.binding.btnBiometric.setOnClickListener {
+            this.viewModel.useBiometrics()
         }
 
     }
