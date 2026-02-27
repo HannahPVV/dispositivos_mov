@@ -15,7 +15,7 @@ class ExploreViewModel : ViewModel() {
         _locations.value = listOf(
             LocationModel("Zibatá", 23, WeatherType.CLOUDY),
             LocationModel("Guadalajara", 20, WeatherType.RAINY),
-            LocationModel("CDMX", 23, WeatherType.CLOUDY),
+            LocationModel("CDMX", 23, WeatherType.SUNNY),
             LocationModel("Londres", 2, WeatherType.SNOWY)
         )
     }
