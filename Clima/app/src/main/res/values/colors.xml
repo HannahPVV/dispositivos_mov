@@ -9,7 +9,7 @@
 
     <!-- +2 tonos -->
     <color name="blue_light_2">#90CAF9</color>
-
+    <color name="orange">#FF8000</color>
     <!-- +3 tonos (ya se nota bastante pero sigue suave) -->
     <color name="blue_light_3">#64B5F6</color>
 
