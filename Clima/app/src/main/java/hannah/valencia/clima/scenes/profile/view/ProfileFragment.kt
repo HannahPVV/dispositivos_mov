@@ -12,6 +12,8 @@ import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import hannah.valencia.clima.databinding.FragmentProfileBinding
 import hannah.valencia.clima.scenes.help.HelpActivity
+import hannah.valencia.clima.sharedPreference.SharedPreferenceConstants
+import hannah.valencia.clima.sharedPreference.SharedPreferenceManager
 import java.io.File
 
 class ProfileFragment : Fragment() {
@@ -19,6 +21,7 @@ class ProfileFragment : Fragment() {
 
     private lateinit var binding: FragmentProfileBinding
     lateinit var pictureUri: Uri
+    private lateinit var sharedPreferenceManager: SharedPreferenceManager
 
     private val takePicture = registerForActivityResult(ActivityResultContracts.TakePicture()) { isImageSaved ->
         if (isImageSaved)
@@ -35,6 +38,16 @@ class ProfileFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         this.binding = FragmentProfileBinding.inflate(inflater, container, false)
+
+        this.sharedPreferenceManager = SharedPreferenceManager(requireContext())
+
+        val name = sharedPreferenceManager.getString(SharedPreferenceConstants.USER_NAME_KEY)
+        val lastName = sharedPreferenceManager.getString(SharedPreferenceConstants.USER_LASTNAME_KEY)
+        val user = sharedPreferenceManager.getString(SharedPreferenceConstants.USER_KEY)
+
+        binding.tvNombre.text = name ?: "No registrado"
+        binding.tvApellidos.text = lastName ?: "No registrado"
+        binding.tvUsername.text = user ?: "No registrado"
 
         this.binding.cvHelp.setOnClickListener {
             this.startActivity(
