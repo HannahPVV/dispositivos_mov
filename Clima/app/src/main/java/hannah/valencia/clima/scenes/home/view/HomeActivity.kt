@@ -38,7 +38,9 @@ class HomeActivity : BaseActivity(){
         this.binding.bnvHome.setOnItemSelectedListener { item ->
             when (item.itemId){
                 R.id.home_menu -> this.replaceFragment(HomeFragment())
+                R.id.search-> this.replaceFragment(ProfileFragment())
                 R.id.explore_menu -> this.replaceFragment(ExploreFragment())
+
             }
             true
         }
