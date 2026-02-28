@@ -6,7 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <!-- HEADER -->
     <LinearLayout
         android:id="@+id/header"
         android:orientation="horizontal"
@@ -41,7 +40,6 @@
             android:contentDescription="Agregar ubicación"/>
     </LinearLayout>
 
-    <!-- LISTA CON SCROLL -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerLocations"
         android:layout_marginTop="16dp"
