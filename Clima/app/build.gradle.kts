@@ -61,6 +61,7 @@ dependencies {
     //o la oa froma porfgrma es ir al acticity poner funcion y se conceta con binding
 
     implementation("com.airbnb.android:lottie:6.4.1")
+    implementation("androidx.fragment:fragment-ktx:1.6.2")
 
     implementation("androidx.media3:media3-common:1.5.1")
 
