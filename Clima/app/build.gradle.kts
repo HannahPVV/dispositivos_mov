@@ -67,4 +67,9 @@ dependencies {
 
     implementation("androidx.biometric:biometric:1.2.0-alpha05")
 
+    // WEB SERVICES
+    implementation("com.android.volley:volley:1.2.1")
+    implementation("com.google.code.gson:gson:2.13.2")
+
+
 }
